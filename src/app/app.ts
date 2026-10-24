@@ -36,5 +36,6 @@ export class App {
   }
 
   loginStatusTest="Login";
+  userPermissionTextBoxStatus=false;
   isLogin=false;
 }

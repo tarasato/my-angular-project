@@ -16,7 +16,7 @@
 <br><br>
 <input type="text" [(ngModel)]="username">
 <br><br>
-<input type="text" [(ngModel)]="userPermission">
+<input type="text" [disabled]=isLogin [(ngModel)]="userPermission">
 <br><br>@if(isLogin){
   <h1 style="background-color: green; color: white;">You are logged in, {{ username }} </h1>
   @if(userPermission == "root"){
@@ -34,7 +34,7 @@
     ></audio>
 
 }
-  <button (click)="isLogin=false; loginStatusTest='Login'">{{loginStatusTest}}</button>
+  <button (click)="isLogin=false; loginStatusTest='Login'";>{{loginStatusTest}}</button>
 }@else{
-  <button (click)="isLogin=true; loginStatusTest='Logout'">{{loginStatusTest}}</button>
+  <button (click)="isLogin=true; loginStatusTest='Logout'";>{{loginStatusTest}}</button>
 }
